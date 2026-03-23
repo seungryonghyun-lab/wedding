@@ -385,8 +385,9 @@ footer p {
     <span class="hero-label">Wedding Invitation</span>
     <div class="hero-names">현승룡<br>이경은</div>
     <div class="hero-divider"></div>
-    <p class="hero-date">2026. 09. 13. Sunday</p>
+    <p class="hero-date">2026. 09. 13. Sunday · 오전 11시</p>
   </div>
+  <span class="hero-upload-hint">↑ 배경 사진을 터치해서 변경하세요</span>
   <div class="scroll-arrow">
     <span>Scroll</span>
     <div class="arrow-line"></div>
@@ -414,12 +415,12 @@ footer p {
   <span class="sec-label">Invitation</span>
   <div class="invite-names-row">
     <div class="name-block">
-      <span class="name-big">현승룡</span>
+      <span class="name-big">현</span>
       <span class="name-small">신랑</span>
     </div>
     <span class="name-heart-sep">♥</span>
     <div class="name-block">
-      <span class="name-big">이경은</span>
+      <span class="name-big">이</span>
       <span class="name-small">신부</span>
     </div>
   </div>
@@ -496,23 +497,23 @@ footer p {
   <div class="acct-group">
     <span class="acct-group-ttl">신랑측 계좌번호</span>
     <div class="acct-card">
-      <div><span class="acct-name">현승룡 · 카카오뱅크</span><span class="acct-num">3333-00-0000000</span></div>
-      <button class="copy-btn" onclick="copyAcct('3333-00-0000000',this)">복사하기</button>
+      <div><span class="acct-name">현승룡 · 농협은행</span><span class="acct-num">3020176259761</span></div>
+      <button class="copy-btn" onclick="copyAcct('3020176259761',this)">복사하기</button>
     </div>
     <div class="acct-card">
-      <div><span class="acct-name">현명진 · 국민은행</span><span class="acct-num">000000-00-000000</span></div>
-      <button class="copy-btn" onclick="copyAcct('000000-00-000000',this)">복사하기</button>
+      <div><span class="acct-name">현명진 · 제주은행</span><span class="acct-num">0604002050</span></div>
+      <button class="copy-btn" onclick="copyAcct('0604002050',this)">복사하기</button>
     </div>
   </div>
   <div class="acct-group">
     <span class="acct-group-ttl">신부측 계좌번호</span>
     <div class="acct-card">
-      <div><span class="acct-name">이경은 · 신한은행</span><span class="acct-num">110-000-000000</span></div>
-      <button class="copy-btn" onclick="copyAcct('110-000-000000',this)">복사하기</button>
+      <div><span class="acct-name">이경은 · 케이뱅크</span><span class="acct-num">100176970089</span></div>
+      <button class="copy-btn" onclick="copyAcct('100176970089',this)">복사하기</button>
     </div>
     <div class="acct-card">
-      <div><span class="acct-name">이창섭 · 우리은행</span><span class="acct-num">0000-000-000000</span></div>
-      <button class="copy-btn" onclick="copyAcct('0000-000-000000',this)">복사하기</button>
+      <div><span class="acct-name">이창섭 · 토스뱅크</span><span class="acct-num">100008252419</span></div>
+      <button class="copy-btn" onclick="copyAcct('100008252419',this)">복사하기</button>
     </div>
   </div>
   <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:14px;line-height:2.2;letter-spacing:0.04em;">
@@ -592,7 +593,7 @@ footer p {
 
 // DDAY
 function tick(){
-  const t = new Date('2026-09-13T13:00:00') - new Date();
+  const t = new Date('2026-09-13T11:00:00') - new Date();
   if(t<=0){ document.querySelector('.dday-row').innerHTML='<div style="flex:1;padding:20px;text-align:center;font-family:Cormorant Garamond,serif;font-size:18px;color:var(--accent);font-style:italic;letter-spacing:0.2em;">결혼합니다 ♥</div>'; return; }
   document.getElementById('dd-d').textContent = String(Math.floor(t/86400000)).padStart(2,'0');
   document.getElementById('dd-h').textContent = String(Math.floor(t%86400000/3600000)).padStart(2,'0');
