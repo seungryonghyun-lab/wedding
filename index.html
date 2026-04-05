@@ -709,7 +709,6 @@ footer p {
 <!-- ACCOUNT -->
 <section id="s-venue">
   <span class="sec-label">오시는 길</span>
-  <span class="venue-name-big">제주 난타호텔</span>
   <a href="#" onclick="openNaverMap();return false;" style="display:block;text-decoration:none;margin-bottom:14px;">
     <div style="
       position:relative; width:100%; height:240px;
@@ -1194,19 +1193,21 @@ function openNaverMap() {
 
 function openTmap() {
   var ua = navigator.userAgent;
+  var lat = '33.2520';
+  var lng = '126.4118';
   var name = encodeURIComponent('제주난타호텔');
   if (/Android/i.test(ua)) {
-    window.location = 'tmap://search?name=' + name;
+    window.location = 'tmap://route?goalname=' + name + '&goalx=' + lng + '&goaly=' + lat;
     setTimeout(function() {
       window.location = 'https://play.google.com/store/apps/details?id=com.skt.tmap.ku';
     }, 1500);
   } else if (/iPhone|iPad|iPod/i.test(ua)) {
-    window.location = 'tmap://search?name=' + name;
+    window.location = 'tmap://route?goalname=' + name + '&goalx=' + lng + '&goaly=' + lat;
     setTimeout(function() {
       window.location = 'https://apps.apple.com/kr/app/tmap/id431589174';
     }, 1500);
   } else {
-    window.open('https://map.naver.com/v5/search/' + name, '_blank');
+    window.open('https://tmap.life/place?name=' + name + '&lat=' + lat + '&lng=' + lng, '_blank');
   }
 }
 
